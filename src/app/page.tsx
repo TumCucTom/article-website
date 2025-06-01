@@ -43,7 +43,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen p-8 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8">Thomas Bale's Project Blog</h1>
+      <h1 className="text-4xl font-bold mb-8">Thomas Bale&apos;s Project Blog</h1>
       <div className="space-y-8">
         {articles.map((article) => (
           <article key={article.slug} className="border-b pb-6">
