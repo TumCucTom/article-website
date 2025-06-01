@@ -4,10 +4,15 @@ import { notFound } from 'next/navigation';
 import { processMarkdown } from '@/lib/markdown';
 import 'katex/dist/katex.min.css';
 
+// Define the shape of the resolved params
+interface ResolvedPageParams {
+  slug: string;
+}
+
+// Define the props for the page component
 interface ArticlePageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<ResolvedPageParams>;
+  // searchParams?: Promise<{ [key: string]: string | string[] | undefined }>; // Example if searchParams were also promises
 }
 
 async function getArticle(slug: string) {
@@ -33,7 +38,8 @@ async function getArticle(slug: string) {
   };
 }
 
-export default async function ArticlePage({ params }: ArticlePageProps) {
+export default async function ArticlePage({ params: paramsPromise }: ArticlePageProps) {
+  const params = await paramsPromise; // Await the promise to get the actual params object
   const article = await getArticle(params.slug);
 
   if (!article) {
