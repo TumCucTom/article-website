@@ -48,7 +48,7 @@ export default async function Home() {
         {articles.map((article) => (
           <article key={article.slug} className="border-b pb-6">
             <Link href={`/articles/${article.slug}`} className="hover:underline">
-              <h2 className="text-2xl font-semibold">{article.title}</h2>
+              <h2 className="text-2xl font-semibold">{article.title.replace(/'/g, "&apos;")}</h2>
             </Link>
             <div className="flex gap-4 mt-2">
               {article.codeLink && (

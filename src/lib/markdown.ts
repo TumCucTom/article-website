@@ -1,5 +1,3 @@
-import { remark } from 'remark';
-import html from 'remark-html';
 import math from 'remark-math';
 import katex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
