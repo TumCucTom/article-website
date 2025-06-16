@@ -10,7 +10,7 @@ export interface SiteConfig {
   description?: string
   language?: string
 
-  twitter?: string
+  instagram?: string
   github?: string
   linkedin?: string
   newsletter?: string
@@ -33,6 +33,8 @@ export interface SiteConfig {
 
   navigationStyle?: types.NavigationStyle
   navigationLinks?: Array<NavigationLink>
+
+  repository?: string
 }
 
 export interface NavigationLink {

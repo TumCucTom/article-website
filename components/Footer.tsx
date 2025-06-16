@@ -1,5 +1,6 @@
 import { FaEnvelopeOpenText } from '@react-icons/all-files/fa/FaEnvelopeOpenText'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
+import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
@@ -36,7 +37,7 @@ export function FooterImpl() {
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>
-        Copyright {currentYear} {config.author}
+        Copyright 2025 Thomas Bale
       </div>
 
       <div className={styles.settings}>
@@ -54,15 +55,15 @@ export function FooterImpl() {
       </div>
 
       <div className={styles.social}>
-        {config.twitter && (
+        {config.instagram && (
           <a
-            className={styles.twitter}
-            href={`https://twitter.com/${config.twitter}`}
-            title={`Twitter @${config.twitter}`}
+            className={styles.instagram}
+            href={`https://instagram.com/${config.instagram}`}
+            title={`Instagram @${config.instagram}`}
             target='_blank'
             rel='noopener noreferrer'
           >
-            <FaTwitter />
+            <FaInstagram />
           </a>
         )}
 
